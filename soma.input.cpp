@@ -3,8 +3,11 @@
 int main()
 {
 	int soma, num1, num2;				
-	
-	scanf("%i", &num1); //funciona como o prompt, '&' obrigatório
+
+	printf("Digite o valor de num1: ");
+	scanf("%i", &num1); //funciona como o prompt, '&' obrigatÃ³rio
+
+	printf("Digite o valor de num2: ");
 	scanf("%i", &num2);
 	
 	soma = num1 + num2;
@@ -12,3 +15,4 @@ int main()
 	
 	return 0;
 }
+
