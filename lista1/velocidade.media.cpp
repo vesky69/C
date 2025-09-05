@@ -13,9 +13,9 @@ int main()
 
     if (time || distance <= 0)
     {
-        printf("Erro: Insira valores positivos meiores que 0.");
-    } else {
         printf("Velocidade média: %.2f KM/H", aSpeed);
+    } else {
+        printf("Erro: Insira valores positivos meiores que 0.");
     }
     return 0;
 }
