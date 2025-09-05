@@ -4,7 +4,7 @@
 int main()
 {
     float area, radius;
-    double PI = M_PI; //M_PI ajuda na recisão do valor PI
+    double PI = M_PI; //M_PI ajuda na precisão do valor PI
 
     printf("Raio do círculo: ");
     scanf("%f", &radius);
