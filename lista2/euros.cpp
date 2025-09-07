@@ -2,7 +2,7 @@
 
 int main()
 {
-    float real, dollarExRate, dollar;
+    float real, dollarExRate, dollar, euro;
     printf("Valor em reais: ");
     scanf("%f", &real);
 
@@ -11,6 +11,9 @@ int main()
 
     dollar = real / dollarExRate;
     printf("Valor em dólares: %.2f", dollar);
+    
+    euro = dollar / 1.1;
+    printf("\nValor em euros: %.2f", euro);
 
     return 0;
 }
