@@ -9,7 +9,7 @@ int main ()
 	
 	if(balance >= 20){
 		printf("Eba, eu vou ao cinema!");	
-		balance = balance - 20;
+		balance -= 20;
 		printf("\nSaldo final: %.2f", balance);
 	} else {
 		printf("POBRE");
@@ -17,3 +17,4 @@ int main ()
 	
 	return 0;
 }
+
