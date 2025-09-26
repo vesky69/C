@@ -42,7 +42,7 @@ int main()
     farofa = calcularPacotes(homem * 0.1 + mulher * 0.1 + crianca * 0.05, 1);
  
     //Refrigerante
-    int total_ml = homem * 600 + mulher * 500 + crianca * 300;
+    int total_ml = homem * 600 + mulher * 500 + crianca * 500;
     refri = ceil(total_ml / 2000.0); // garrafas de 2L
 
     //Unidade
