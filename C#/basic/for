@@ -1,0 +1,98 @@
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Contar valores pares e somar valores ímpares de 55 á 107:
+            int soma = 0;
+            int contagem = 0;
+
+            for (int i = 55; i <= 107; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    contagem++;
+                }
+                else
+                {
+                    soma += i;
+                }
+            }
+
+            Console.WriteLine("Contagem: " + contagem);
+            Console.WriteLine("Soma: " + soma);
+
+            //Valores de 0 á 100 multiplicados por 5:
+            for (int j = 0; j <= 100; j++)
+            {
+                int multiplicacao = j * 5;
+                Console.WriteLine(j + " x 5 = " + multiplicacao);
+            }
+
+            //Solicita ao usuário um valor e mostra sua tabuada:
+            Console.WriteLine("Digite um valor para a tabuada: ");
+            int valor = int.Parse(Console.ReadLine());
+
+            for (int n = 0; n <= 10; n++)
+            {
+                int tabuada = valor * n;
+                Console.WriteLine(valor + " x " + n + " = " + tabuada);
+            }
+
+            //Tabuada de 0 á 10:
+            for (int i = 0; i <= 10; i++)
+            {
+                for (int j = 0; j <= 10; j++)
+                {
+                    int tabuada = i * j;
+                    Console.WriteLine(i + " x " + j + " = " + tabuada);
+                }
+            }
+
+            //Média dos valores de 15 á 50:
+            int soma2 = 0;
+            int contador2 = 0;
+
+            for (int m = 15; m <= 50; m++)
+            {
+                soma2 += m;
+                contador2++;
+            }
+
+            int media = soma2 / contador2;
+            Console.WriteLine("A média entres os valores 15 e 55 é: " + media);
+
+            //Intervalo de valores definido pelo usuário:
+            Console.WriteLine("Digite o primeiro valor: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o primeiro valor: ");
+            int num2 = int.Parse(Console.ReadLine());
+
+            for (int a = num1; a <= num2; a++)
+            {
+                Console.WriteLine(a);
+            }
+
+            //Média de valores de um intervalo definido pelo usuário:
+            Console.WriteLine("Digite o primeiro valor: ");
+            int num3 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o primeiro valor: ");
+            int num4 = int.Parse(Console.ReadLine());
+            int soma3 = 0;
+            int contador3 = 0;
+
+            for (int b = num3; b <= num4; b++)
+            {
+                soma3 += b;
+                contador3++;
+            }
+
+            int media2 = soma3 / contador3;
+            Console.WriteLine("A média entres os valores " + num3 + " e " + num4 + " é: " + media2); 
+        }
+    }
+}

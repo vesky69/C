@@ -1,0 +1,68 @@
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] matriz = new int[3, 3];
+
+            //Matriz conta par e ímpar:
+            int countEvenMatriz = 0;
+            int countOddMatriz = 0;
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(0); j++)
+                {
+                    Console.WriteLine("Informe um valor inteiro: ");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for(int j = 0; j < matriz.GetLength(0); j++)
+                {
+                    if (matriz[i, j] % 2 == 0)
+                    {
+                        countEvenMatriz++;
+                    }
+                    else
+                    {
+                        countOddMatriz++;
+                    }
+                }
+            }
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(0); j++)
+                {
+                    Console.Write($"[{matriz[i, j]}]");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("O vetor possui " + countEvenMatriz + " valores pares!");
+            Console.WriteLine("O vetor possui " + countOddMatriz + " valores ímpares!");
+
+            //MATRIZ DE STRING:
+            string[,] matrizString = new string[3, 3];
+
+
+            for (int i = 0; i < matrizString.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrizString.GetLength(0); j++)
+                {
+                    Console.WriteLine("Informe um nome: ");
+                    matrizString[i, j] = Console.ReadLine();
+                    Console.Write($"[{matrizString[i, j]}]");
+                }
+                Console.WriteLine();
+            }
+        }
+    }
+}

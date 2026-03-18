@@ -1,0 +1,55 @@
+using System.IO.Pipelines;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //Int:
+            Console.WriteLine("Funções");
+
+            int x = 5;
+            int y = 3;
+
+            int result = soma(x, y);
+
+            Console.WriteLine("Resultado: " + result);
+
+            //Float:
+            soma(7, 9);
+
+            Console.WriteLine("Resultado: " + result);
+
+            //String:
+            string name = readName();
+            showName(name);
+        }
+
+        //Função int:
+        static int soma(int a, int b)
+        {
+            return a + b;
+        }
+
+        //Função float void:
+        static void soma2(float a, float b)
+        {
+            result = a + b;
+        }
+
+        //Função string:
+        static string readName()
+        {
+            Console.WriteLine("Digite o seu nome: ");
+            string name = Console.ReadLine();
+            return name;
+        }
+        static void showName(string name)
+        {
+            Console.WriteLine("O nome é: " + name);
+        }
+    }
+}

@@ -1,0 +1,90 @@
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] vetor = new int[4];
+
+            for(int c = 0; c < vetor.Length; c++)
+            {
+                Console.WriteLine("Informe um valor inteiro: ");
+                vetor[c] = int.Parse(Console.ReadLine());
+            }
+
+            for(int c = 0; c < vetor.Length; c++)
+            {
+                Console.WriteLine("[" + vetor[c] + "]");
+            }
+
+            //Vetor conta pares e ímpares:
+            int countEven = 0;
+            int countOdd = 0;
+
+            for(int i = 0; i < vetor.Length; i++)
+            {
+                if (vetor[i] % 2 == 0)
+                {
+                    countEven++;
+                }
+                else
+                {
+                    countOdd++;
+                }
+            }
+
+            Console.WriteLine("O vetor possui " + countEven + " valores pares!");
+            Console.WriteLine("O vetor possui " + countOdd + " valores ímpares!");
+
+            //Vetor multiplicado por 2:
+            for(int j = 0; j < vetor.Length; j++)
+            {
+                vetor[j] = vetor[j] * 2;
+            }
+            for (int j = 0; j < vetor.Length; j++)
+            {
+                Console.WriteLine(vetor[j]);
+            }
+
+            //Vetor que some valores:
+            int somaVetor = 0;
+            int[] vetor2 = new int[4];
+
+            for (int m = 0; m < vetor2.Length; m++)
+            {
+                Console.WriteLine("Informe um valor inteiro: ");
+                vetor2[m] = int.Parse(Console.ReadLine());
+            }
+
+            for (int m = 0; m < vetor2.Length; m++)
+            {
+                somaVetor += vetor2[m];
+            }
+            Console.WriteLine("A soma dos valores é: " + somaVetor);
+
+            //Índice par * 5, índice ímpar e valor par * 3, índice e valor ímpar * 7:
+            for (int i = 0; i < vetor2.Length; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    vetor2[i] = vetor2[i] * 5;
+                }
+                else
+                {
+                    if (vetor2[i] % 2 == 0)
+                    {
+                        vetor2[i] = vetor2[i] * 3;
+                    } else
+                    {
+                        vetor2[i] = vetor2[i] * 7;
+                    }
+                    
+                }
+                Console.WriteLine(vetor2[i]);
+            }
+        }
+    }
+}
